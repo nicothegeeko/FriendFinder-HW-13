@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friends Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Foodie Friends Survey</h1>
+      <hr>
+      <h2 class="text-center">Please feel free to fill in all of the below info related to food, so you can find a true foodie friend </h2>
+      <br>
+
+
+    <div class="row">
+      <div class="col-lg-12">
+
+  </div>
+
+    </div></div>
+
+    <div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Name</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="" id="name" required>
+  </div>
+    
+
+    <div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Link to Photo Image</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="" id="photo" required>
+  </div>
+
+<h2>Question 1</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How likely are you to go on a diet?</label>
+    <select  class="form-control" id="question1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+
+  <h2>Question 2</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many pounds of food do you have daily?</label>
+    <select class="form-control" id="question2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 3</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many pounds of chocolate could you eat at once?</label>
+    <select class="form-control" id="question3">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 4</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many meals do you have a day?</label>
+    <select class="form-control" id="question4">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 5</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many snacks do you have a day</label>
+    <select class="form-control" id="question5">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 6</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many times do you eat out a week?</label>
+    <select class="form-control" id="question6">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 7</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How high would you rate Gordon Ramsay?</label>
+    <select class="form-control" id="question7">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 8</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many pancakes do you have in a short stack?</label>
+    <select class="form-control" id="question8">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 9</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many licks do you take from a lollipop before you chomp on it?</label>
+    <select class="form-control" id="question9">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <h2>Question 10</h2>
+  <div class="form-group">
+    <label for="exampleSelect2">How many spices do you put on your food daily?</label>
+    <select class="form-control" id="question10">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+    <div class="text-center">
+        <a href="/reserve"><button type="button" class="btn btn-lg btn-danger" id="submit">  Submit </button></a>
+      </div>
+
+  <footer class="footer">
+      <div class="container">
+        <p> <a href="/api/friends">API Friends List</a> | <a href="https://github.com/nicothegeeko/FriendFinder-HW-13.git">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+</body>
+
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+<script type="text/javascript">
+
+$("#submit").on("click", function(event) {
+      event.preventDefault();
+      var scores = [];
+      $('select','.container').each(function() {
+        scores.push($(this).val()); 
+      });
+      var newCharacter = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: scores
+      };
+
+      // Question: What does this code do??
+      $.post("/api/new", newCharacter)
+      .done(function(data) {
+        console.log(data);
+        alert("Adding character...");
+      });
+      console.log(newCharacter);
+    });
+
+ 
+
+</script>
+</html>

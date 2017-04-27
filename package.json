@@ -1,0 +1,32 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "an application to find friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "hello",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicothegeeko/FriendFinder-HW-13.git"
+  },
+  "keywords": [
+    "friend",
+    "finder"
+  ],
+  "author": "Nico Flicker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicothegeeko/FriendFinder-HW-13/issues"
+  },
+  "homepage": "https://github.com/nicothegeeko/FriendFinder-HW-13#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+    "engines": {
+    "node": "7.3.0",
+    "npm": "3.10.10"
+  }
+}
