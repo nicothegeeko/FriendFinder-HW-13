@@ -32,6 +32,8 @@
                 <div class="col-10">
                     <input class="form-control" type="text" value="" id="photo" required>
                 </div>
+
+                <!-- Questions for the official foodie friend finder app -->
                 <h2>Question 1</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How likely are you to go on a diet?</label>
@@ -43,6 +45,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 2</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many pounds of food do you have daily?</label>
@@ -54,6 +57,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 3</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many pounds of chocolate could you eat at once?</label>
@@ -65,6 +69,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 4</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many meals do you have a day?</label>
@@ -76,6 +81,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 5</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many snacks do you have a day</label>
@@ -87,6 +93,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 6</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many times do you eat out a week?</label>
@@ -98,6 +105,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 7</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How high would you rate Gordon Ramsay?</label>
@@ -109,6 +117,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 8</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many pancakes do you have in a short stack?</label>
@@ -120,6 +129,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 9</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many licks do you take from a lollipop before you chomp on it?</label>
@@ -131,6 +141,7 @@
                         <option>5</option>
                     </select>
                 </div>
+
                 <h2>Question 10</h2>
                 <div class="form-group">
                     <label for="exampleSelect2">How many spices do you put on your food daily?</label>
@@ -142,36 +153,12 @@
                         <option>5</option>
                     </select>
                 </div>
-                <!--   <div class="text-center">
-        <a href="/reserve"><button type="button" class="btn btn-lg btn-danger" id="submit">  Submit </button></a>
-      </div> -->
+                
                 <div class="container">
                     <!-- Trigger the modal with a button -->
                     <button type="button" class="btn btn-info btn-lg" id="submit" data-toggle="modal" data-target="#friend-modal">Submit</button>
                 </div>
-                <!-- Modal -->
-                <!-- <div class="modal fade" id="myModal" id="friend-modal" role="dialog">
-    <div class="modal-dialog"> -->
-                <!-- Modal content-->
-                <!-- <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Foodie Friend Match</h4>
-        </div>
-        <p>Here is the most compatible foodie for you:</p>
-        <div class="modal-body">
-        </div>
-        <div id ="friend-modal"></div>
-        <div id ="h4"></div>
-
-        <img id="friends-photo">
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div> -->
+                
                 <!-- Modal -->
                 <div class="modal fade" id="friend-modal" role="dialog">
                     <div class="modal-dialog">
@@ -203,11 +190,11 @@
     </div>
 </footer>
 </body>
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+<!-- Javascript that handels information from the server -->
 <script type="text/javascript">
 //empty array to hold the value from the survey questions
       var answerArray = [];
-      //loop to push the answers from survey to the array (NEED TO UPDATE i< AS QUESTIONS ARE ADDED)
+      //loop that pushes the answers from survey to the array
       for(i=1; i<11; i++){
         answerArray.push(parseInt($('#question' + i).val().substring(0,1)));
       }
@@ -223,11 +210,11 @@ $("#submit").on("click", function(event) {
         photo: $("#photo").val().trim(),
         scores: answerArray
     };
-// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+// This is used to route the URL instead of typing the info again
 
 var currentURL = window.location.origin;
-    // Question: What does this code do??
-
+    
+    // submitting data 
     $.post(currentURL + "/api/friends", newFriend)
         .done(function(data) {
             console.log(data);
@@ -235,24 +222,11 @@ var currentURL = window.location.origin;
     console.log(newFriend);
 
 
-// In this code, jQuery is used to "download" the data from our server
-// We then dynamically display this content in our table. This is very similar to the group projects you just completed.
-// It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
-
-// function runFriendQuery() {
-
-// Here we get the location of the root page.
-// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-
-
-// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+// Display the data
 $.ajax({url: "/api/friends", method: "GET"
       }).done(function(res) {
 
-        // // Loop through and display each of the customers
-        // // for (var i = 0; i < friends.length; i++) {
-        //   $("friends").html(friends[0].name);
-        //   $("friends").attr("src", friends[0].photo);
+        // Loop through the info and create the foodie friend match
 
         var foodieFriend;
         var bestMatch = 100;
@@ -266,13 +240,13 @@ $.ajax({url: "/api/friends", method: "GET"
             }
             //adds the values in the array to give a single value that represents the difference between a potential friend and the current entry
             var difference = differenceArray.reduce(add, 0);
-            //if the difference is less than any of the previous comparisons, push the current profile to the best match position
+            //push the match to the closest match based on all of the people input to the foodie matches
             if (difference < bestMatch) {
                 foodieFriend = res[i];
                 bestMatch = difference;
                 differenceArray = [];
             }
-            //or just move on
+            //if no match is made
             else {
                 differenceArray = [];
             }
@@ -290,7 +264,7 @@ $.ajax({url: "/api/friends", method: "GET"
         $('#survey')[0].reset();
 
     });
-
+// allows for the comparison to be made of current foodie friend matches
       function add(a, b){
   return a+b;
 };
