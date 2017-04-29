@@ -184,7 +184,7 @@
         <div class="modal-body">
           <p>Here is the most compatible foodie for you:</p>
         </div>
-        <div id ="friends"></div><img id="friends-photo">
+        <div id ="friend-modal"></div><img id="friends-photo">
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
@@ -227,7 +227,6 @@ $("#submit").on("click", function(event) {
       $.post("/api/friends", newFriend)
       .done(function(data) {
         console.log(data);
-        alert("Adding character...");
       });
       console.log(newFriend);
     });
@@ -284,6 +283,16 @@ $("#submit").on("click", function(event) {
           }
           
       }
+
+      //set up the display for the modal
+        var friendName = '<h4>' + friendsArray.name + '<h4>';
+        var friendPic = '<img width="300px" src=' + friendsArray.photo + '>';
+        //show the modal
+        $('#friend-modal').modal('show');
+        $('#friend-modal h4').html(friendName);
+        $('.modal-body').html(friendPic);
+        //clear the entries
+        $('#survey')[0].reset();
         
       });
     }
