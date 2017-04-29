@@ -216,9 +216,12 @@ $("#submit").on("click", function(event) {
         photo: $("#photo").val().trim(),
         scores: scores
     };
+// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
 
+var currentURL = window.location.origin;
     // Question: What does this code do??
-    $.post("/api/friends", newFriend)
+
+    $.post(currentURL + "/api/friends", newFriend)
         .done(function(data) {
             console.log(data);
         });
@@ -233,13 +236,11 @@ $("#submit").on("click", function(event) {
 
 // Here we get the location of the root page.
 // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
-var currentURL = window.location.origin;
+
 
 // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-$.ajax({
-        url: currentURL + "/api/friends",
-        method: "GET"
-    }).done(function(res) {
+$.ajax({url: currentURL + "/api/friends", method: "GET"
+      }).done(function(res) {
 
         // // Loop through and display each of the customers
         // // for (var i = 0; i < friends.length; i++) {
@@ -270,7 +271,6 @@ $.ajax({
             }
 
         }
-      }
 
         //set up the display for the modal
         var friendName = '<h4>' + foodieFriend.name + '<h4>';
