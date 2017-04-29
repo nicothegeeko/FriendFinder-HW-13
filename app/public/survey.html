@@ -233,7 +233,7 @@ var currentURL = window.location.origin;
             console.log(data);
         });
     console.log(newFriend);
-});
+
 
 // In this code, jQuery is used to "download" the data from our server
 // We then dynamically display this content in our table. This is very similar to the group projects you just completed.
@@ -288,6 +288,8 @@ $.ajax({url: "/api/friends", method: "GET"
         $('.modal-body').html(friendPic);
         //clear the entries
         $('#survey')[0].reset();
+
+    });
 
     });
 // }
