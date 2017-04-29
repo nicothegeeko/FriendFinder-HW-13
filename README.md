@@ -2,6 +2,8 @@
 
 # Week of 13 HW: Friend Finder - Node and Express Servers
 
+  ## Link to Heroku: https://nico-foodie-friend-finder.herokuapp.com/
+
 ### App Description
 
 This application is built to help you succesfully discover a that best matches your tastes. This full-stack site will take in results your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
