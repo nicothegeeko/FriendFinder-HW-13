@@ -184,7 +184,10 @@
         <div class="modal-body">
           <p>Here is the most compatible foodie for you:</p>
         </div>
-        <div id ="friend-modal"></div><img id="friends-photo">
+        <div id ="friend-modal"></div>
+        <div id ="h4"></div>
+
+        <img id="friends-photo">
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
@@ -243,21 +246,12 @@ $("#submit").on("click", function(event) {
 
       // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
       $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-      .done(function(friends) {
+      .done(function(res) {
 
-        // Here we are logging the URL so we have access to it for troubleshooting
-        console.log("------------------------------------");
-        console.log("URL: " + currentURL + "/api/friends");
-        console.log("------------------------------------");
-
-        // Here we then log the NYTData to console, where it will show up as an object.
-        console.log(friends);
-        console.log("------------------------------------");
-
-        // Loop through and display each of the customers
-        // for (var i = 0; i < friends.length; i++) {
-          $("friends").html(friends[0].name);
-          $("friends").attr("src", friends[0].photo);
+        // // Loop through and display each of the customers
+        // // for (var i = 0; i < friends.length; i++) {
+        //   $("friends").html(friends[0].name);
+        //   $("friends").attr("src", friends[0].photo);
           
           var foodieFriend;
         var bestMatch = 100;
