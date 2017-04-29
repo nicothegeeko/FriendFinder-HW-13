@@ -173,11 +173,11 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" id="friend-modal" role="dialog">
-    <div class="modal-dialog">
+  <!-- <div class="modal fade" id="myModal" id="friend-modal" role="dialog">
+    <div class="modal-dialog"> -->
     
       <!-- Modal content-->
-      <div class="modal-content">
+      <!-- <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Foodie Friend Match</h4>
@@ -195,6 +195,31 @@
       </div>
       
     </div>
+  </div> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="friend-modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="footer">
+    <br>
+    <br>
+  </div>
   </div>
   
 
@@ -280,8 +305,8 @@ $("#submit").on("click", function(event) {
       }
 
       //set up the display for the modal
-        var friendName = '<h4>' + friendsArray.name + '<h4>';
-        var friendPic = '<img width="300px" src=' + friendsArray.photo + '>';
+        var friendName = '<h4>' + foodieFriend.name + '<h4>';
+        var friendPic = '<img width="300px" src=' + foodieFriend.photo + '>';
         //show the modal
         $('#friend-modal').modal('show');
         $('#friend-modal h4').html(friendName);
